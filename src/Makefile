@@ -1,7 +1,7 @@
-all: memt19937-II well512
+all: memt19937-II_test well512_test
 	
-memt19937-II:
+memt19937-II_test:
 
-well512:
+well512_test:
 
 

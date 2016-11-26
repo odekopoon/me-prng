@@ -219,20 +219,20 @@ double genrand_res53(void)
 } 
 /* These real versions are due to Isaku Wada, 2002/01/09 added */
 
-int main(void)
-{
-    int i;
-    unsigned int init[4]={0x123U, 0x234U, 0x345U, 0x456U}, length=4;
-    init_by_array(init, length);
-    printf("1000 outputs of genrand_int32()\n");
-    for (i=0; i<1000; i++) {
-      printf("%10u ", genrand_int32());
-      if (i%5==4) printf("\n");
-    }
-    printf("\n1000 outputs of genrand_real2()\n");
-    for (i=0; i<1000; i++) {
-      printf("%10.8f ", genrand_real2());
-      if (i%5==4) printf("\n");
-    }
-    return 0;
-}
+// int main(void)
+// {
+//     int i;
+//     unsigned int init[4]={0x123U, 0x234U, 0x345U, 0x456U}, length=4;
+//     init_by_array(init, length);
+//     printf("1000 outputs of genrand_int32()\n");
+//     for (i=0; i<1000; i++) {
+//       printf("%10u ", genrand_int32());
+//       if (i%5==4) printf("\n");
+//     }
+//     printf("\n1000 outputs of genrand_real2()\n");
+//     for (i=0; i<1000; i++) {
+//       printf("%10.8f ", genrand_real2());
+//       if (i%5==4) printf("\n");
+//     }
+//     return 0;
+// }
