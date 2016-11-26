@@ -1,3 +1,10 @@
+/*
+
+   WELL512 PRNG Algorithm
+   C/C++ code written by Chris Lomont, www.lomont.org
+   quote from http://lomont.org/Math/Papers/2008/Lomont_PRNG_2008.pdf
+
+ */
 #include <stdio.h>
 #include <string.h>
 #include "genrand.c"
