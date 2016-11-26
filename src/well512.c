@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /* initialize state to random bits  */
 static unsigned long state[16];
 /* init should also reset this to 0 */
@@ -18,3 +20,8 @@ unsigned long WELLRNG512(void)
 	state[index] = a^b^d^(a<<2)^(b<<18)^(c<<28); return state[index];
 }
 
+
+int main(void)
+{
+    return 0;
+}
