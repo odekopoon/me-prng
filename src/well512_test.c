@@ -223,6 +223,9 @@
 int main(void)
 {
     int i;
+    unsigned int init[KEY_LENGTH] = {0x304d0c18U,0x38024410U,0x7636513eU,0xbef1d83aU,0x91b6f2f1U,0x5a46e44cU,0x51b081ceU,0x72f205a9U,0xd99ead80U,0x2b94bd63U,0x3c55544dU,0xf9e6e69bU,0xe8fbdab7U,0x16c2015fU,0x229ca001U,0x0e0de97aU};
+    init_by_array(init, KEY_LENGTH);
+
     // unsigned int init[4]={0x123U, 0x234U, 0x345U, 0x456U}, length=4;
     // init_by_array(init, length);
     printf("1000 outputs of genrand_int32()\n");

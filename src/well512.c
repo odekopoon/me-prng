@@ -1,12 +1,20 @@
 #include <stdio.h>
+#include <string.h>
 #include "genrand.c"
 
-
+#define KEY_LENGTH 16
 /* initialize state to random bits  */
-// static unsigned int state[16];
-static unsigned int state[16] = {0x304d0c18U,0x38024410U,0x7636513eU,0xbef1d83aU,0x91b6f2f1U,0x5a46e44cU,0x51b081ceU,0x72f205a9U,0xd99ead80U,0x2b94bd63U,0x3c55544dU,0xf9e6e69bU,0xe8fbdab7U,0x16c2015fU,0x229ca001U,0x0e0de97aU};
+static unsigned int state[KEY_LENGTH];
+
 /* init should also reset this to 0 */
 static unsigned int idx = 0;
+
+void init_by_array(unsigned int init_key[], int key_length)
+{
+	idx = 0;
+	memcpy(state, init_key, sizeof(int) * key_length);
+}
+
 /* return 32 bit random number      */
 unsigned int genrand_int32(void)
 {
